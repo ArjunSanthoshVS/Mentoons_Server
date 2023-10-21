@@ -122,8 +122,8 @@ module.exports = {
                     },
                 ],
                 mode: 'payment',
-                success_url: 'http://127.0.0.1:5173/cart',
-                cancel_url: 'http://127.0.0.1:5173/cart',
+                success_url: 'https://mentoons.onrender.com/cart',
+                cancel_url: 'https://mentoons.onrender.com/cart',
             });
             try {
                 await payment.save();
@@ -186,8 +186,8 @@ module.exports = {
                     },
                 ],
                 mode: 'payment',
-                success_url: 'http://127.0.0.1:5173/podcast',
-                cancel_url: 'http://127.0.0.1:5173/podcast',
+                success_url: 'https://mentoons.onrender.com/podcast',
+                cancel_url: 'https://mentoons.onrender.com/podcast',
             });
             await User.updateOne({ _id: userId }, { $set: { hasPurchasedPack: true } });
             res.send({ url: session.url });

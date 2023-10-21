@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 module.exports = () => {
     try {
-        mongoose.connect("mongodb+srv://arjunsanthosh738:mkAR7sPKQOtzxxGF@cluster0.sg1iarz.mongodb.net/Mentoons")
+        mongoose.connect(process.env.MONGO_URI)
         console.log("Connected Successfully...!")
     } catch (error) {
         console.log("Not Connected...!")
